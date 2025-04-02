@@ -38,8 +38,6 @@ env/
 # Project specific
 static/uploads/*
 !static/uploads/.gitkeep
-models/trained/*
-!models/trained/.gitkeep
 models/checkpoints/*
 !models/checkpoints/.gitkeep
 models/knowledge_base.json
@@ -50,14 +48,6 @@ models/knowledge_base.json
 # Node modules for web version
 platforms/web/node_modules/
 platforms/web/package-lock.json
-
-# Generated CSS
-platforms/web/static/css/main.css
-
-# Temp files
-temp/
-.temp/
-output/
 
 # Data directories (potentially large)
 data/plantnet_300K/images_test
