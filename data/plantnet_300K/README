@@ -1,0 +1,12 @@
+
+This dataset is available online on zenodo at: https://doi.org/10.5281/zenodo.4726653). New versions may be released at the same address (e.g. in case of errors correction). 
+
+Images are stored in the three folders images_test, images_train and images_val. 
+
+All images belonging to the same class (i.e. species) are grouped in the same subfolder with the subfolder name being the species identifier. The correspondance between species identifiers and species scientific names is provided in the file plantnet300K_species_names.json
+
+The file plantnet_300K_metadata.json contains additional metadata of each image including the license (cc-by-sa) and the author name. The cc-by-sa licence imposes that you cite the author name for any use of any image of the dataset. 
+
+The file plantnet_300K_metadata.json contains a field called "split" that specifies for each image either it is part of the training set, the validation set or the test set. 
+
+

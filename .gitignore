@@ -60,10 +60,10 @@ temp/
 output/
 
 # Data directories (potentially large)
-data/plantnet_300K/*
-!data/plantnet_300K/.gitkeep
-data/test_images/*
-!data/test_images/.gitkeep
+data/plantnet_300K/images_test
+data/plantnet_300K/images_train
+data/plantnet_300K/images_val
+data/plantnet
 
 # Local configuration
 .env.local
@@ -85,12 +85,6 @@ htmlcov/
 # Recorded videos
 recordings/
 *.mp4
-
-#dataset
-data/plantnet_300K/images_test
-data/plantnet_300K/images_train
-data/plantnet_300K/images_val
-data/plantnet
 
 #web
 platforms/web/static/uploads
