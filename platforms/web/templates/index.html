@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+{% block title %}FytóSpot - Plant Identification System{% endblock %}
+{% block content %}
+<div class="app-container">
+   <div class="stepper">
+      <div class="step-item" id="step-1">
+         <div class="step-circle active">1</div>
+         <div class="step-label">Upload Image</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-item" id="step-2">
+         <div class="step-circle">2</div>
+         <div class="step-label">Process Image</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="step-item" id="step-3">
+         <div class="step-circle">3</div>
+         <div class="step-label">View Results</div>
+      </div>
+   </div>
+   <div class="content-area">
+      <div class="panel-container" id="upload-panel">
+         <div class="panel-title">
+            <h2>Upload a Plant Image</h2>
+            <p class="panel-description">Upload or drag & drop an image containing a plant you want to identify</p>
+         </div>
+         <div class="upload-container">
+            <div class="upload-area" id="upload-area">
+               <div class="upload-icon">
+                  <i class="fas fa-cloud-upload-alt"></i>
+               </div>
+               <p class="upload-text">Drag & drop your image here or click to browse</p>
+               <p class="upload-hint">Supported formats: JPG, PNG, BMP</p>
+               <input type="file" id="image-upload" class="hidden" accept="image/*">
+            </div>
+            <div class="upload-preview hidden" id="preview-container">
+               <div class="preview-header">
+                  <h3>Preview</h3>
+                  <button class="btn-icon" id="remove-image" title="Remove image">
+                  <i class="fas fa-times"></i>
+                  </button>
+               </div>
+               <div class="image-container relative">
+                  <img id="preview-image" class="preview-image" alt="Preview">
+               </div>
+            </div>
+         </div>
+         <div class="action-buttons">
+            <button id="continue-to-detection" class="btn btn-primary disabled">
+            Continue to Detection <i class="fas fa-arrow-right ml-2"></i>
+            </button>
+         </div>
+      </div>
+      <div class="panel-container hidden" id="detection-panel">
+         <div class="panel-title">
+            <h2>Detect Plants in Your Image</h2>
+            <p class="panel-description">Choose a detection method and process your image</p>
+         </div>
+         <div class="detection-methods">
+            <h3>Detection Method</h3>
+            <div class="method-cards">
+               <div class="method-card active" data-method="multi">
+                  <div class="method-icon"><i class="fas fa-th"></i></div>
+                  <div class="method-details">
+                     <h4>Multi Detection</h4>
+                     <p>Uses all detection techniques for best results</p>
+                  </div>
+               </div>
+               <div class="method-card" data-method="color">
+                  <div class="method-icon"><i class="fas fa-palette"></i></div>
+                  <div class="method-details">
+                     <h4>Color Detection</h4>
+                     <p>Focuses on plant colors and patterns</p>
+                  </div>
+               </div>
+               <div class="method-card" data-method="contour">
+                  <div class="method-icon"><i class="fas fa-draw-polygon"></i></div>
+                  <div class="method-details">
+                     <h4>Contour Analysis</h4>
+                     <p>Identifies plant shapes and outlines</p>
+                  </div>
+               </div>
+               <div class="method-card" data-method="texture">
+                  <div class="method-icon"><i class="fas fa-th-large"></i></div>
+                  <div class="method-details">
+                     <h4>Texture Detection</h4>
+                     <p>Focuses on plant surface patterns</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="action-buttons">
+            <button id="back-to-upload" class="btn btn-secondary">
+            <i class="fas fa-arrow-left mr-2"></i> Back
+            </button>
+            <button id="process-image" class="btn btn-primary">
+            <i class="fas fa-search mr-2"></i> Process Image
+            </button>
+         </div>
+      </div>
+      <div class="panel-container hidden" id="results-panel">
+         <div class="panel-title">
+            <h2>Plant Identification Results</h2>
+            <p class="panel-description">See what our AI identified in your image</p>
+         </div>
+         <div class="results-container">
+            <div class="results-grid">
+               <div class="results-images">
+                  <div class="image-box">
+                     <h3>Your Image</h3>
+                     <div class="image-container">
+                        <img id="result-image" class="result-image" alt="Original image">
+                     </div>
+                  </div>
+                  <div class="image-box">
+                     <h3>Detection Visualization</h3>
+                     <div class="image-container">
+                        <div id="debug-placeholder" class="placeholder-content">
+                           <div class="placeholder-icon">⚙️</div>
+                           <p>Detection visualization will appear here</p>
+                        </div>
+                        <img id="debug-image" class="debug-image hidden" alt="Debug view">
+                     </div>
+                  </div>
+               </div>
+               <div class="identification-results">
+                  <div class="plant-header">
+                     <span id="plant-icon" class="plant-icon">🌱</span>
+                     <h3 id="plant-name" class="plant-name">Plant Name</h3>
+                  </div>
+                  <div class="confidence-meter">
+                     <div class="confidence-label">
+                        <span>Confidence:</span>
+                        <span id="confidence-value" class="confidence-value">0%</span>
+                     </div>
+                     <div class="progress-bar">
+                        <div id="confidence-bar" class="progress-value" style="width: 0%"></div>
+                     </div>
+                  </div>
+                  <div class="info-tabs">
+                     <div class="tab-headers">
+                        <div class="tab-header active" data-tab="info">Plant Information</div>
+                        <div class="tab-header" data-tab="alternatives">Alternative Matches</div>
+                        <div class="tab-header" data-tab="care">Care Guide</div>
+                     </div>
+                     <div class="tab-content active" id="info-tab">
+                        <div class="plant-info" id="plant-info">
+                           <p class="placeholder-text">Plant information will appear here after identification</p>
+                        </div>
+                     </div>
+                     <div class="tab-content" id="alternatives-tab">
+                        <div id="alternatives-list" class="alternatives-list">
+                           {% for i in range(4) %}
+                           <div class="alt-match">
+                              <div class="alt-rank">{{ i + 1 }}</div>
+                              <div class="alt-name">--</div>
+                              <div class="confidence-badge">--</div>
+                           </div>
+                           {% endfor %}
+                        </div>
+                     </div>
+                     <div class="tab-content" id="care-tab">
+                        <div id="care-info" class="care-info">
+                           <p class="placeholder-text">Care information will appear here after identification</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="action-button">
+                     <button id="identify-plant" class="btn btn-primary">
+                     <i class="fas fa-leaf mr-2"></i> Identify Plant
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="action-buttons">
+            <button id="back-to-detection" class="btn btn-secondary">
+            <i class="fas fa-arrow-left mr-2"></i> Back
+            </button>
+            <button id="start-over" class="btn btn-secondary">
+            <i class="fas fa-redo mr-2"></i> Start Over
+            </button>
+         </div>
+      </div>
+   </div>
+   <div class="status-bar">
+      <span id="status-icon" class="status-icon">ℹ️</span>
+      <span id="status-text" class="status-text">Ready to detect plants</span>
+   </div>
+</div>
+{% endblock %}
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

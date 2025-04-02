@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}500 - Server Error{% endblock %}
+{% block content %}
+<div class="max-w-lg mx-auto text-center py-12">
+   <div class="text-8xl text-error mb-6">🛑</div>
+   <h1 class="text-4xl font-bold mb-4">500</h1>
+   <h2 class="text-2xl text-lightGreen mb-6">Server Error</h2>
+   <p class="mb-4">Something went wrong on our end. The server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+   <p class="mb-8">Our technical team has been notified of this issue.</p>
+   <div class="flex flex-col md:flex-row gap-4 justify-center">
+      <a href="{{ url_for('index') }}" class="btn btn-primary">
+      <i class="fas fa-home mr-2"></i> Return to Home
+      </a>
+      <button onclick="window.location.reload()" class="btn btn-secondary">
+      <i class="fas fa-redo mr-2"></i> Try Again
+      </button>
+   </div>
+</div>
+{% endblock %}

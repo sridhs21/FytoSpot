@@ -1,0 +1,96 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+pfs/
+ENV/
+env/
+.env
+.venv
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Project specific
+static/uploads/*
+!static/uploads/.gitkeep
+models/trained/*
+!models/trained/.gitkeep
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+models/knowledge_base.json
+
+# Logs
+*.log
+
+# Node modules for web version
+platforms/web/node_modules/
+platforms/web/package-lock.json
+
+# Generated CSS
+platforms/web/static/css/main.css
+
+# Temp files
+temp/
+.temp/
+output/
+
+# Data directories (potentially large)
+data/plantnet_300K/*
+!data/plantnet_300K/.gitkeep
+data/test_images/*
+!data/test_images/.gitkeep
+
+# Local configuration
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Flask
+instance/
+.webassets-cache
+
+# Coverage
+.coverage
+htmlcov/
+
+# Recorded videos
+recordings/
+*.mp4
+
+#dataset
+data/plantnet_300K/images_test
+data/plantnet_300K/images_train
+data/plantnet_300K/images_val
+data/plantnet
+
+#web
+platforms/web/static/uploads
