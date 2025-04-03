@@ -39,12 +39,23 @@ FytóSpot is a computer vision-based plant identification and tracking system. I
 
 ## 🔧 Technology Stack
 
-- **Computer Vision:** OpenCV
-- **Deep Learning:** PyTorch, ResNet
-- **Backend:** Flask
-- **Frontend:** HTML/CSS/JavaScript
-- **Desktop UI:** CustomTkinter (Tkinter-based modern UI)
-- **Data Processing:** NumPy, Pandas
+### Computer Vision
+- [OpenCV](https://opencv.org/) - Core image processing and computer vision functions
+- NumPy - Numerical processing for image data
+
+### Machine Learning
+- [PyTorch](https://pytorch.org/) - Deep learning framework
+- ResNet - Convolutional neural network architecture for classification
+- torchvision - Computer vision utilities for PyTorch
+
+### Backend
+- Flask - Lightweight web server
+- JSON - Data interchange format for plant information
+
+### Frontend
+- HTML/CSS - Responsive web interface
+- JavaScript - Interactive UI elements
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) - Modern desktop UI components
 
 ## 📦 Installation
 
@@ -150,26 +161,6 @@ Then update the `detect_object` method to include your new method.
 - **Detection Speed:** 20-30 FPS on modern hardware
 - **Tracking Stability:** Smooth tracking with temporal filtering
 - **Identification Accuracy:** ~80% for common plant species
-
-## 🛠️ Tech Stack
-
-### Computer Vision
-- [OpenCV](https://opencv.org/) - Core image processing and computer vision functions
-- NumPy - Numerical processing for image data
-
-### Machine Learning
-- [PyTorch](https://pytorch.org/) - Deep learning framework
-- ResNet - Convolutional neural network architecture for classification
-- torchvision - Computer vision utilities for PyTorch
-
-### Backend
-- Flask - Lightweight web server
-- JSON - Data interchange format for plant information
-
-### Frontend
-- HTML/CSS - Responsive web interface
-- JavaScript - Interactive UI elements
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) - Modern desktop UI components
 
 
 ## 📝 License
