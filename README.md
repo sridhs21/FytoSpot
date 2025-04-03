@@ -164,14 +164,14 @@ Then update the `detect_object` method to include your new method.
 
 ### Backend
 - Flask - Lightweight web server
-
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 - JSON - Data interchange format for plant information
 
 ### Frontend
 - HTML/CSS - Responsive web interface
 - JavaScript - Interactive UI elements
 - [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) - Modern desktop UI components
+
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
