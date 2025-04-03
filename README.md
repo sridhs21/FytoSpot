@@ -155,8 +155,22 @@ Then update the `detect_object` method to include your new method.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgements
+## 🛠️ Tech Stack
 
-- [OpenCV](https://opencv.org/) for computer vision capabilities
-- [PyTorch](https://pytorch.org/) for deep learning framework
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) for modern UI components
+### Computer Vision
+- [OpenCV](https://opencv.org/) - Core image processing and computer vision functions
+- NumPy - Numerical processing for image data
+
+### Machine Learning
+- [PyTorch](https://pytorch.org/) - Deep learning framework
+- ResNet - Convolutional neural network architecture for classification
+- torchvision - Computer vision utilities for PyTorch
+
+### Backend
+- Flask - Lightweight web server
+- JSON - Data interchange format for plant information
+
+### Frontend
+- HTML/CSS - Responsive web interface
+- JavaScript - Interactive UI elements
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) - Modern desktop UI components
