@@ -8,7 +8,7 @@
 
 ## 📋 Overview
 
-FytóSpot is an advanced computer vision-based plant identification and tracking system. It uses machine learning techniques to detect and identify plants from images and video streams, with support for multiple detection methods, real-time tracking, and detailed information about identified plant species.
+FytóSpot is a computer vision-based plant identification and tracking system. It uses machine learning techniques to detect and identify plants from images and video streams, with support for multiple detection methods, real-time tracking, and detailed information about identified plant species.
 
 ## ✨ Features
 
@@ -151,10 +151,6 @@ Then update the `detect_object` method to include your new method.
 - **Tracking Stability:** Smooth tracking with temporal filtering
 - **Identification Accuracy:** ~80% for common plant species
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🛠️ Tech Stack
 
 ### Computer Vision
@@ -168,6 +164,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Backend
 - Flask - Lightweight web server
+
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 - JSON - Data interchange format for plant information
 
 ### Frontend
