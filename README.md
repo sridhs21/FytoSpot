@@ -69,7 +69,7 @@ FytóSpot is a computer vision-based plant identification and tracking system. I
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/fytospot.git
+git clone https://github.com/sridhs21/FytoSpot.git
 cd fytospot
 
 # Install dependencies
