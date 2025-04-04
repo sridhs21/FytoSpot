@@ -95,6 +95,13 @@ pip install -r requirements-desktop.txt
 python platforms/desktop/main.py
 ```
 
+### Mobile Application
+
+> 📱 **Coming Soon!** 
+>
+> The mobile version of FytóSpot is currently under development.
+> 
+
 ## 🖥️ Usage
 
 ### Web Interface
