@@ -29,5 +29,6 @@ ninja>=1.10.0
 pyyaml>=6.0
 tensorboard>=2.8.0
 
-# Note: For CUDA support, run this separate command:
+# Note: For CUDA support, run either of these as seperate command:
 # pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu121
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
