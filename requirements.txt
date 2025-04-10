@@ -8,7 +8,8 @@ tqdm>=4.62.0
 # Deep learning frameworks
 torch>=1.10.0
 torchvision>=0.11.0
-timm>=0.6.7  # Transformer models
+timm>=0.6.7
+einops>=0.4.1
 
 # Data handling
 pandas>=1.3.0
@@ -23,6 +24,10 @@ scikit-image>=0.19.0
 # Utility
 pathlib>=1.0.1
 
-# Optional - for YOLO detection
-ultralytics>=8.0.0  # Uncomment if you want to use YOLO detection
+# GPU acceleration and optimization
+ninja>=1.10.0
+pyyaml>=6.0
+tensorboard>=2.8.0
 
+# Note: For CUDA support, run this separate command:
+# pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu121

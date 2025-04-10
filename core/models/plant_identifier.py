@@ -199,17 +199,13 @@ class PlantIdentifier:
     
     def _format_predictions(self, class_probs: Dict[int, float]) -> List[Dict]:
         """Format class probabilities for display."""
-        
         sorted_probs = sorted(
             [(k, v) for k, v in class_probs.items()],
             key=lambda x: x[1],
             reverse=True
         )
         
-        
-        top_probs = sorted_probs[:5]
-        
-        
+        top_probs = sorted_probs[:5]        
         result = []
         for class_id, prob in top_probs:
             result.append({
